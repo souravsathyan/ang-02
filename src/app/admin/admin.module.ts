@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsersComponent } from './components/users/users.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AdminComponent } from './admin.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 
 
@@ -22,7 +23,8 @@ import { AdminComponent } from './admin.component';
     DashboardComponent,
     UsersComponent,
     ProductsComponent,
-    AdminComponent
+    AdminComponent,
+    OrdersComponent
   ],
   imports: [
     CommonModule,
