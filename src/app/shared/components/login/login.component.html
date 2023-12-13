@@ -1,0 +1,36 @@
+<div class="cardContainer" fxLayout="row" fxLayoutAlign="center">
+    <app-cards 
+    [title]="'Login'" 
+    [disabled]="formGroup.invalid" 
+    [subtitle]="'Please enter your login credentials'">
+        <form 
+        [formGroup]="formGroup" 
+        (ngSubmit)="onSubmit()">
+        <!-- email -->
+            <app-input-field 
+            [label]="'Email'" 
+            [type]="'email'" 
+            [control]="emailControl" 
+            [inputId]="'email'"
+            [name]="'email'" 
+            [placeholder]="'example@gmail.com'">
+        </app-input-field>
+        <!-- password -->
+        <app-input-field 
+            [label]="'Password'" 
+            [type]="'password'" 
+            [control]="emailControl" 
+            [inputId]="'password'"
+            [name]="'password'" 
+            [placeholder]="'password'">
+        </app-input-field>
+            <div>
+                <h4>Not Registered? Don't worry. Please click register</h4>
+            </div>
+            <mat-card-actions align="end">
+                <button type="submit" [disabled]="formGroup.invalid" style="margin-right: 10px;" mat-raised-button color="accent">Submit</button>
+                <button mat-raised-button color="accent">Register</button>
+            </mat-card-actions>
+        </form>
+    </app-cards>
+</div>
