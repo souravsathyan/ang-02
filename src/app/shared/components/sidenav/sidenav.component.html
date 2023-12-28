@@ -1,6 +1,6 @@
 <mat-nav-list>
-    <a mat-list-item routerLink="./" routerLinkActive="list-item-active">Dashboard</a>
-    <a mat-list-item routerLink="./products" routerLinkActive="list-item-active">Products</a>
-    <a mat-list-item routerLink="./users" routerLinkActive="list-item-active">Users</a>
-    <a mat-list-item routerLink="./orders" routerLinkActive="list-item-active">Orders</a>
+    @for (item of menuList; track $index) {
+        <a mat-list-item routerLink="{{item.code}}" routerLinkActive="list-item-active">{{item.name}}</a>
+    }
+
 </mat-nav-list>

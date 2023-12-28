@@ -1,0 +1,19 @@
+{
+    "role": [
+        { "code": "admin", "name": "Admin" },
+        {"code":"user","name":"User"}
+    ],
+    "menu":[
+        {"code":"dashboard","name":"Dashboard"},
+        {"code":"orders","name":"Orders"},
+        {"code":"products","name":"Products"},
+        {"code":"users","name":"Users"},
+        {"code":"home","name":"Home"}
+    ],
+    "roleAccess":[
+        {"role":"admin","menu":"dashboard"},
+        {"role":"admin","menu":"orders"},
+        {"role":"admin","menu":"products"},
+        {"role":"admin","menu":"users"}
+    ]
+}

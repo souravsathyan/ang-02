@@ -4,7 +4,7 @@
             <mat-icon>menu</mat-icon>
         </button>
 
-        <span>App Logo</span>
+        <span>K - Food </span>
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
@@ -25,7 +25,7 @@
                         <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item> <mat-icon>logout</mat-icon> Logout </button>
+                        <button mat-menu-item (click)="logout()"> <mat-icon>logout</mat-icon> Logout </button>
                     </mat-menu>
                 </li>
             </ul>

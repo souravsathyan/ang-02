@@ -1,13 +1,29 @@
 <mat-form-field appearance="outline">
     <mat-label>{{label}}</mat-label>
-    <input [class.invalid]="control.invalid && control.dirty && control.touched" matInput [type]="type" [formControl]="control" [id]="inputId" [name]="name" placeholder={{placeholder}}>
+    <input 
+    [class.invalid]="control.invalid && control.dirty && control.touched" matInput [type]="type"
+    [autocomplete]="autocomplete" 
+    [formControl]="control" 
+    [id]="inputId" 
+    [name]="name" 
+    placeholder={{placeholder}}
+    >
     @if (control.invalid && control.dirty && control.touched) {
-        <ng-container>
-            @for (err of control.errors | keyvalue; track $index) {
-                <span>
-                    {{errorMessages[err.key]}}
-                </span>
-            }
-        </ng-container>
+    <ng-container>
+
+        @if (control.errors['required']) {
+        <mat-error>This value is required</mat-error>
+        }
+        @if (control.errors['email']) {
+        <mat-error>Invalid email id</mat-error>
+        }
+        @if (control.errors['minlength']) {
+        <mat-error>the password must be 4 characters</mat-error>
+        }
+        @if (control.errors['mismatch']) {
+        <mat-error>the password is not matching</mat-error>
+        }
+
+    </ng-container>
     }
 </mat-form-field>
