@@ -31,7 +31,7 @@ import { InputFieldComponent } from './components/input-field/input-field.compon
 import { LoginComponent } from './components/login/login.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { TableComponent } from './components/table/table.component';
-
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -68,7 +68,8 @@ import { TableComponent } from './components/table/table.component';
     MatTableModule,
     MatProgressSpinnerModule,
     DatePipe,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
     
     
   ],
@@ -91,7 +92,11 @@ import { TableComponent } from './components/table/table.component';
     TableComponent,
     MatCardModule,
     ReactiveFormsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ]
 
 })

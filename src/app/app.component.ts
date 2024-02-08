@@ -12,16 +12,6 @@ export class AppComponent{
     isSideBarOpen(){
         this.sideBarOpen = ! this.sideBarOpen
     }
-  // isMenuVisible=false
   
   constructor(private router : Router){}
-
-    // ngDoCheck(): void {
-    //     const currentRoute = this.router.url
-    //     if(currentRoute == '/login' || currentRoute == '/register'){
-    //       this.isMenuVisible = false
-    //     }else{
-    //       this.isMenuVisible = true
-    //     }
-    // }
 }

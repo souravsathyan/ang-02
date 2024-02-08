@@ -7,5 +7,11 @@ import {Component } from '@angular/core';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent{
-  
+  editMode = false
+  buttonText='Add Product'
+
+  toggleEditMode(){
+    this.editMode = !this.editMode
+    this.buttonText = (this.editMode) ? 'Back' : "Add Product"
+  }
 }
